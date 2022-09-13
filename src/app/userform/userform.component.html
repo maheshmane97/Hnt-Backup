@@ -1,0 +1,15 @@
+<h2>User Form</h2>
+<input [(ngModel)]='user.name'>
+<br><br>
+<input [(ngModel)]='user.age' type="number">
+<br><br>
+<input [(ngModel)]='user.emailId'>
+<br><br>
+<button (click)='save()'> Submit </button>
+
+<ol>
+    <li *ngFor='let user of users'>
+        {{user.name}}, {{user.age}}, {{user.emailId}} <button (click)
+        ='deleteUser(user.id)'>Delete</button>
+    </li>
+</ol>
